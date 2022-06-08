@@ -1,0 +1,24 @@
+.card-title {
+	text-decoration: none;
+}
+
+.bg-car {
+    background-image: url('car_title.png');
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 100%;
+  }
+
+.bg-brandcolor {
+    background-color: #0a100c;
+  }
+
+.car-img {
+    object-fit: contain;
+}
+
+.disc-font {
+    font-size: 3rem;
+}
