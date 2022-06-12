@@ -2,6 +2,10 @@ a {
 	text-decoration: none !important;
 }
 
+.modal-title-m{
+    margin-left: 315px; 
+}
+
 .crop {
     width: auto;
     height: auto;
@@ -22,7 +26,7 @@ a {
     color: #81abcf ;
 }
 .bg-car {
-    background-image: url('car_title.png');
+    background-image: url('home_car.png');
     background-color: black;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,6 +52,34 @@ a {
 
 .blue-shd{
     box-shadow: 0 0 3px #0B5ED7;
+}
+
+.brand-text{
+    color: #1f16ba;
+}
+
+.shaded {
+  position: relative;
+  
+  background-image: url('home_car.png');
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.shaded:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.4);
+  z-index: 2;
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
 }
 
 @font-face{

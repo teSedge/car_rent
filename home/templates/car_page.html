@@ -3,30 +3,33 @@
 
 
 {% block title %}
-CAR
+{{car.name}}
 {% endblock %}
 
 {% block content %}
 <div class=" d-flex justify-content-center mb-3 mt-5">
-	<h1 class="text-light font-brand">BMW M5</h1>
+	<h1 class="text-light font-brand">{{car.name}}</h1>
 </div>
-<div class="px-0 px-md-5 row overflow-visible d-flex">
-<div id="carouselExampleIndicators" class="container-fluid carousel slide col-lg-7 col-12" data-bs-ride="carousel">
+<div class="px-0 px-md-5 row overflow-visible d-flex me-3">
+<div class="col-lg-7 col-12">
+<div id="carouselExampleIndicators" class="container-fluid carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    {% for img in imgs %}
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{img.N}}" aria-label="Slide {{img.N}}"></button>
+    {% endfor %}
   </div>
   <div class="rounded carousel-inner ratio ratio-16x9">
+    
     <div class="carousel-item active">
-      <img src="{% static 'BMW_M5_1.png' %}" class="d-block w-100 car-img" alt="...">
+      <img src="{{ car.main_image.url }}" class="d-block w-100 car-img" alt="...">
     </div>
+    {% for img in imgs %}
     <div class="carousel-item">
-      <img src="{% static 'BMW_M5_1.png' %}" class="d-block w-100 car-img" alt="...">
+      <img src="{{img.image.url}}" class="d-block w-100 car-img" alt="...">
     </div>
-    <div class="carousel-item">
-      <img src="{% static 'BMW_M5_1.png' %}" class="d-block w-100 car-img" alt="...">
-    </div>
+    {% endfor %}
+
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -37,6 +40,15 @@ CAR
     <span class="visually-hidden">Следующий</span>
   </button>
 </div>
+<div class=" ms-md-4 ms-5 px-0 my-3 fs-1 fw-semilight ">
+  <p class="mx-0 text-uppercase fs-6">
+    <span class="brand-color">Мощность </span>{{car.power}} <span class="px-3">&nbsp;</span>
+    <span class="brand-color">Разгон до 100 км/ч </span>{{car.acceleration}} <span class="px-3">&nbsp;</span>
+    <span class="brand-color">Привеод </span> {{car.wd}} <span class="px-3">&nbsp;</span>
+    <span class="brand-color">Год Выпуска </span> {{car.year}}
+  </p> 
+</div>
+</div>
     
 	<div class="sticky d-flex col-lg-5 col-12 p-5 flex-column align-items-center">
 		<h3>Стоимость за сутки</h3>
@@ -46,18 +58,8 @@ CAR
     <button class="text-lite justify seld center btn btn-primary m-2"><h3>Арендовать</h3></button>	
   </div>
 </div>
-<div class="mx-5 my-3 fs-5 fw-semilight">
-	<p class=" col-7 text-uppercase">
-    <span class="brand-color">Мощность </span>400 л.с. <span class="px-3">•</span>
-    <span class="brand-color">Разгон до 100 км/ч </span>3.5 с <span class="px-3">•</span>
-    <span class="brand-color">Объем двигателя </span>3.5 л <span class="px-3">•</span>
-    <span class="brand-color">Привеод </span> полный <span class="px-3">•</span>
-    <span class="brand-color">Год Выпуска </span> 2020 <span class="px-3">•</span>
-    <span class="brand-color">Топливо </span> бензин
-  </p> 
-</div>
 <div class="col-7 m-5 font-brand d-flex">
-<p class=" fs-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+<pre class=" fs-4" style="white-space:pre-wrap; ">{{car.discription}}</pre>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
 {% endblock %}

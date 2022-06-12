@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
 path('', views.home, name = 'home'),
-path('car/', views.car, name = 'car'),
+path('<slug:car_slug>', views.car, name='car'),
+
 ]
