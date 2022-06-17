@@ -12,6 +12,10 @@ a {
     overflow: hidden;
 }
 
+.md-48{
+  font-size: 100px !important;
+  color: green !important;
+}
 .sticky {
   position: sticky;
   top: 150px;
@@ -23,7 +27,7 @@ a {
     margin: -30px px 0px 0px;
 }
 .brand-color{
-    color: #81abcf ;
+    color: #81abcf;
 }
 .bg-car {
     background-image: url('home_car.png');

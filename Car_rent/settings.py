@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home'
+    'home',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -135,6 +136,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+
+EMAIL_HOST = 'smtp.list.ru'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'yaartur@list.ru'
+EMAIL_HOST_PASSWORD = 'sBfYu9vhcm58QDEBF7cD'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
