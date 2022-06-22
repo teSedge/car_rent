@@ -28,7 +28,9 @@ SECRET_KEY = 'django-insecure-a3km-o8-svk*x6wt*!2m04$)5@*3mqisw0$_jnlz+p_&lel7xl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+first-motors-club.herokuapp.com;
+]
 
 
 # Application definition
