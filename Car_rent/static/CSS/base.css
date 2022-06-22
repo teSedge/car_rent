@@ -34,8 +34,7 @@ a {
     background-color: black;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: auto auto;
+    background-size: auto ;
   }
 
 .bg-brandcolor {
