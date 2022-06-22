@@ -32,13 +32,16 @@
 	
 	{% include 'footer.html' %}
 	<script src="{% static 'bootstrap/bootstrap.bundle.js' %}" crossorigin="anonymous"></script>
+	
 	<script type="text/javascript">
 		const navLinks = document.querySelectorAll('.nav-link')
 		const menuToggle = document.getElementById('navbar')
 		const bsCollapse = new bootstrap.Collapse(menuToggle)
-		navLinks.forEach((l) => {
+		navLinks.forEach((l) => {  
 		    l.addEventListener('click', () => { bsCollapse.toggle() })
+		
 		})
 	</script>
+	
 </body>
 </html>

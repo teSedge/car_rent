@@ -10,9 +10,9 @@
 			+7(926) 104<b>-</b>18<b>-</b>20
 	</div>
 	<button style="font-size:13px;" class="btn btn-primary d-lg-none px-1 me-2" data-bs-toggle="modal" data-bs-target="#dialog">ЗАБРОНИРОВАТЬ</i></button>
-	<button class="navbar-toggler border-0 bg-dark" data-bs-toggle="collapse" data-bs-target="#navbar"><span class="material-icons-outlined text-light">menu</span></button>
-	<div id="navbar"class="collapse navbar-collapse justify-content-center">	
-		<ul class="navbar-nav ms-3 mt-3 mt-lg-0">
+	<button id="navtoggler" class="navbar-toggler border-0 bg-dark" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#navbar"><span class="material-icons-outlined text-light">menu</span></button>
+	<div id="navbar"class="collapse navbar-collapse justify-content-center" aria-expanded="false">	
+		<ul class="navbar-nav nav ms-3 mt-3 mt-lg-0">
 			<li class="nav-item"><a class="nav-link text-light text-uppercase fs-italic" href="{%url 'home'%}#cars">автомобили</a></li>
 			<li class="nav-item"><a class="nav-link text-light text-uppercase fs-italic" href="{%url 'home'%}#terms">условия аренды</a></li>
 			<li class="nav-item"><a class="nav-link text-light text-uppercase fs-italic" href="{%url 'home'%}#contacts" aria-expanded="false">КОНТАКТЫ</a></li>
@@ -49,3 +49,4 @@
 <div style="height: 73px;">
 	
 </div>
+
