@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Car, Car_secondary_img
 from django.core.mail import send_mail, EmailMessage
 from django.http import HttpResponse
+import requests
 
 # Create your views here.
 
