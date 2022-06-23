@@ -38,7 +38,11 @@ FIRST MOTOR CLUB
 						<img src="{{car.main_image.url}}" class="card-img-top car-img" style="pointer-events: none">
 					</div>
 					<div class="card-body">
-						<div class="row justify-content-between d-flex align-items-start">
+						<div class="row justify-content-between">
+							<h2 class="font-brand card-title col-auto link-empty d-none d-lg-block">{{car.name}}</h2>
+							<p class="font-brand col-auto card-title d-none d-lg-block">от {{ car.price_11_20 }} ₽</p>
+						</div>
+						<div class="container text-center d-block d-lg-none">
 							<h2 class="font-brand card-title col-auto link-empty">{{car.name}}</h2>
 							<p class="font-brand col-auto card-title">от {{ car.price_11_20 }} ₽</p>
 						</div>
